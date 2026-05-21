@@ -413,6 +413,8 @@
   "mcp.modal.descriptionSettings": "Add and save MCP servers to use across your flows.",
   "mcp.modal.descriptionFlow": "Add and save MCP servers. Manage servers in",
   "mcp.modal.descriptionFlowLink": "settings",
+  "mcp.modal.lockedTitle": "MCP server management is locked",
+  "mcp.modal.lockedDescription": "Contact an administrator to manage external MCP servers.",
   "mcp.modal.jsonTabLabel": "Paste in JSON config",
   "mcp.modal.jsonPlaceholder": "Paste in JSON config to add server",
   "mcp.modal.fieldName": "Name",
