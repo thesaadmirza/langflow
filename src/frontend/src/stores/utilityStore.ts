@@ -66,7 +66,7 @@ export const useUtilityStore = create<UtilityStoreType>((set, get) => ({
     set({ allowCustomComponents }),
   mcpBaseUrl: "",
   setMcpBaseUrl: (mcpBaseUrl: string) => set({ mcpBaseUrl }),
-  // P2 ICA integration flags
+  // Embedded mode flags
   embeddedMode: false,
   setEmbeddedMode: (embeddedMode: boolean) => set({ embeddedMode }),
   hideLogoutButton: false,

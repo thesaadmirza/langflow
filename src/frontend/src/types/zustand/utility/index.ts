@@ -40,7 +40,7 @@ export type UtilityStoreType = {
   setAllowCustomComponents: (allowCustomComponents: boolean) => void;
   mcpBaseUrl: string;
   setMcpBaseUrl: (mcpBaseUrl: string) => void;
-  // P2 ICA integration flags
+  // Embedded mode flags
   embeddedMode: boolean;
   setEmbeddedMode: (embeddedMode: boolean) => void;
   hideLogoutButton: boolean;

@@ -432,7 +432,7 @@ class ConfigResponse(BaseConfigResponse):
     default_folder_name: str
     hide_getting_started_progress: bool
     allow_custom_components: bool
-    # P2 feature flags for ICA integration
+    # Embedded mode feature flags
     embedded_mode: bool
     hide_logout_button: bool
     hide_new_project_button: bool
@@ -452,8 +452,6 @@ class ConfigResponse(BaseConfigResponse):
         Returns:
             ConfigResponse: An instance populated with configuration and feature flag values.
         """
-        import os
-
         from langflow.services.database.models.folder.constants import DEFAULT_FOLDER_NAME
 
         return cls(
@@ -473,7 +471,7 @@ class ConfigResponse(BaseConfigResponse):
             mcp_base_url=settings.mcp_base_url,
             webhook_auth_enable=auth_settings.WEBHOOK_AUTH_ENABLE,
             default_folder_name=DEFAULT_FOLDER_NAME,
-            hide_getting_started_progress=os.getenv("HIDE_GETTING_STARTED_PROGRESS", "").lower() == "true",
+            hide_getting_started_progress=settings.hide_getting_started_progress,
             allow_custom_components=settings.allow_custom_components,
             embedded_mode=settings.embedded_mode,
             hide_logout_button=settings.hide_logout_button or settings.embedded_mode,
